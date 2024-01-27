@@ -34,7 +34,7 @@ html, body {
 }
 
 .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn:before {
-    content: 'Pacific Violet 0.92';
+    content: 'Pacific Violet 1.01';
     display: flex;
     align-items: center;
     justify-content: center;
