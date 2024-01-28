@@ -46,8 +46,6 @@ div > canvas {
       background-size: 600%
 }
 
-#root > div > div
-
 .Common-entranceBackground {
     background-image: url(-);
 }
