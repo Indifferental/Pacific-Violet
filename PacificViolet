@@ -12,7 +12,7 @@ html, body {
 }
 
 .StartScreenComponentStyle-loadingBlock:before {
-    content: 'Pacific Violet v1.15';
+    content: 'Pacific Violet v1.21';
     width: 100%;
     color: white;
     height: 100%;
@@ -96,42 +96,31 @@ div.BattleComponentStyle-canvasContainer > div.Common-container {
 }
 
 .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn:before {
-    content: 'Pacific Violet 1.15';
+    content: 'Pacific Violet v1.21';
     z-index: 99;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    color: rgb(181, 110, 255, 80%);
-    text-shadow: rgb(181 110 255) 0em 0em 0.05em;
+    position: absolute;
+    color: rgb(255, 255, 255, 100%);
     font-family: RubikMedium;
-    font-size: 600%;
-    border-radius: 12.5px;
-    box-shadow: rgba(0, 0, 0, 100%) 0em 0em 0.05em 0.025em;
+    text-transform: uppercase;
+    font-size: 200%;
     height: 180px;
     width: 50%;
-    backdrop-filter: blur(15px);
-    background: rgba(0, 0, 0, 80%)
-}
-
-.ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn:after {
-    content: '';
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border-radius: 12.5px;
-    height: 180px;
-    width: 50%;
-    z-index: -1;
-    filter: blur(30px);
-      background: linear-gradient(20deg, transparent, #c700ff, #c100ff, #8500ff, transparent, #8500ff, #c100ff, #c700ff, transparent);
-      background-size: 500%;
-      animation: eff 40s ease-in-out infinite
 }
 
 .ApplicationLoaderComponentStyle-logo {
-    visibility: hidden
+    visibility: visible;
+    width: 6.28562em;
+    height: 6.08938em;
+    position: relative;
+    margin-bottom: 7.675em;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -143,8 +132,19 @@ div.BattleComponentStyle-canvasContainer > div.Common-container {
     visibility: hidden
 }
 
+.ApplicationLoaderComponentStyle-helpChangeTip {
+    position: relative;
+    margin-top: 4em;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 div.ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn > div.Common-flexCenterAlignCenter > span {
-    visibility: hidden
+    visibility: visible;
+    margin-bottom: 40.675em;
 }
 
 .LobbyLoaderComponentStyle-container {
@@ -1895,7 +1895,7 @@ div > div.GarageCommonStyle-garageContainer > div.GarageCommonStyle-positionCont
     animation-play-state: running
 }
 
-.GarageCommonStyle-garageContainer, .TankPreviewComponentStyle-visible{
+.GarageCommonStyle-garageContainer, .TankPreviewComponentStyle-visible {
       animation: 400ms ease-in-out 0s 1 normal none running gradientMenu2
 }
 
@@ -2035,10 +2035,6 @@ div > div.GarageCommonStyle-garageContainer > div.GarageCommonStyle-positionCont
 
 .LockableContainersComponentStyle-leftPane {
     background: rgb(0, 0, 0, 0%)
-}
-
-.ApplicationLoaderComponentStyle-helpChangeTip {
-    visibility: visible
 }
 
 .BattleMessagesComponentStyle-message {
