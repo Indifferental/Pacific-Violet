@@ -96,7 +96,7 @@ div.BattleComponentStyle-canvasContainer > div.Common-container {
 }
 
 .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn:before {
-    content: 'Pacific Violet 1.14';
+    content: 'Pacific Violet 1.15';
     z-index: 99;
     display: flex;
     align-items: center;
