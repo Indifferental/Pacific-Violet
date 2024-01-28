@@ -12,7 +12,7 @@ html, body {
 }
 
 .StartScreenComponentStyle-loadingBlock:before {
-    content: 'Pacific Violet v1.14';
+    content: 'Pacific Violet v1.15';
     width: 100%;
     color: white;
     height: 100%;
@@ -28,6 +28,28 @@ html, body {
 
 .StartScreenComponentStyle-text {
     visibility: hidden
+}
+
+div > div.Common-flexStartAlignStart {
+    justify-content: center
+}
+
+div > div.BattleCreateComponentStyle-mainContainer.ProBattlesComponentStyle-mainContainer.Common-flexStartAlignStart {
+    justify-content: flex-start
+}
+
+div > div.GarageCommonStyle-garageContainer > div > div.GarageCommonStyle-positionContentAlteration.GarageCommonStyle-subMenu > div.BattleCreateComponentStyle-scrollBattlePick.Common-scrollBarVisible > div > div {
+    backdrop-filter: blur(2px);
+    box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%);
+    border: 2px solid rgba(185, 135, 255, 0.15);
+    border-radius: 10px;
+    transition: all 200ms ease-in-out 0s;
+    background: rgb(0, 0, 0, 10%)
+}
+
+div > div.GarageCommonStyle-garageContainer > div > div.GarageCommonStyle-positionContentAlteration.GarageCommonStyle-subMenu > div.BattleCreateComponentStyle-scrollBattlePick.Common-scrollBarVisible > div > div:hover {
+    background: rgb(255, 255, 255, 0.05);
+    cursor: pointer
 }
 
 div > canvas {
@@ -64,12 +86,18 @@ div.BattleComponentStyle-canvasContainer > div.Common-container {
     text-shadow: rgb(255 255 255) 0em 0em 0.25em
 }
 
+.ApplicationLoaderComponentStyle-container {
+    z-index: -2;
+    background: black
+}
+
 .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn {
     backdrop-filter: blur(15px)
 }
 
 .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn:before {
     content: 'Pacific Violet 1.14';
+    z-index: 99;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -197,10 +225,6 @@ div.ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn
     box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 50%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%)
 }
 
-div > div.Common-flexStartAlignStart {
-    justify-content: center
-}
-
 .MainScreenComponentStyle-gradientBlockRight, .MainScreenComponentStyle-gradientBlock {
     width: 60em;
     opacity: 0.25
@@ -215,9 +239,9 @@ div > div.Common-flexStartAlignStart {
     height: 7em;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    border-bottom: 1.5px solid rgba(185, 135, 255, 0.25);
-    border-left: 1.5px solid rgba(185, 135, 255, 0.25);
-    border-right: 1.5px solid rgba(185, 135, 255, 0.25);
+    border-bottom: 2px solid rgba(185, 135, 255, 0.15);
+    border-left: 2px solid rgba(185, 135, 255, 0.15);
+    border-right: 2px solid rgba(185, 135, 255, 0.15);
     box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 50%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 50%);
     transition: all 200ms ease-in-out 0s;
       animation: 400ms ease-in-out 0s 1 normal none running lobbyloadercont1
@@ -293,9 +317,9 @@ div > div > div > div > div > div.UserInfoContainerStyle-containerProgressMainSc
     min-height: 7em;
     height: 7em;
     width: 95%;
-    border-bottom: 1.5px solid rgba(185, 135, 255, 0.25);
-    border-left: 1.5px solid rgba(185, 135, 255, 0.25);
-    border-right: 1.5px solid rgba(185, 135, 255, 0.25);
+    border-bottom: 2px solid rgba(185, 135, 255, 0.15);
+    border-left: 2px solid rgba(185, 135, 255, 0.15);
+    border-right: 2px solid rgba(185, 135, 255, 0.15);
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%);
@@ -452,7 +476,7 @@ div > div.BreadcrumbsComponentStyle-headerContainer > div.Common-flexCenterAlign
 
 .ListItemsComponentStyle-itemsListContainer {
     background: rgb(0, 0, 0, 10%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     outline: 1.5px solid rgb(183 0 255 / 25%);
     box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%)
 }
@@ -609,7 +633,7 @@ div > div.BreadcrumbsComponentStyle-headerContainer > div.Common-flexCenterAlign
 }
 
 .Common-entranceGradient {
-    background: linear-gradient(180deg, black, transparent)
+    background: transparent
 }
 
 .ContainersStyle-openBuyButton {
@@ -621,6 +645,16 @@ div > div.BreadcrumbsComponentStyle-headerContainer > div.Common-flexCenterAlign
 
 .UserInfoContainerStyle-blockForIconTankiOnline {
     visibility: hidden
+}
+
+.MainSectionComponentStyle-transformLinearGradientImgCard, .MainSectionComponentStyle-linearGradientImgCard, .BattleCardComponentStyle-line {
+    background: rgb(0 0 0 / 25%)
+}
+
+div > div.ProBattlesComponentStyle-mainContainer > div.Common-flexStartAlignCenterColumn > div.BattleInfoComponentStyle-blockCard > div {
+    box-shadow: inset 0em 0em 1em 0.25em black, 0em 0em 1em 0.25em black;
+    outline: 2px solid rgba(185, 135, 255, 0.25);
+    border-radius: 10px
 }
 
 div > div.ProBattlesComponentStyle-mainContainer > div.Common-flexStartAlignCenterColumn > div {
@@ -644,7 +678,7 @@ div > div.ProBattlesComponentStyle-mainContainer > div.Common-flexStartAlignCent
 }
 
 .Common-flexStartAlignCenter.Common-flexWrapNowrap.modeLimitIcon {
-    background: rgb(0 0 0/25%);
+    background: rgb(0 0 0/10%);
     backdrop-filter: blur(2px);
     width: 98%;
     margin-left: 8px;
@@ -1033,8 +1067,9 @@ div > div.BreadcrumbsComponentStyle-headerContainer > div.BreadcrumbsComponentSt
     background: transparent
 }
 
-.SuperMissionComponentStyle-descriptionSuperMission {
+.SuperMissionComponentStyle-descriptionSuperMission, div > div.GarageCommonStyle-garageContainer > div > div.GarageCommonStyle-positionContentAlteration.GarageCommonStyle-subMenu > div.Common-flexSpaceBetweenAlignStartColumn {
     box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 /25%);
+    background: transparent;
     backdrop-filter: blur(2px);
     border-right: 2px solid rgb(185 135 255 / 25%);
     border-top: 2px solid rgb(185 135 255 / 25%);
@@ -1896,7 +1931,7 @@ div > div.GarageCommonStyle-garageContainer > div.GarageCommonStyle-positionCont
 }
 
 .GarageCommonStyle-animatedBlurredLeftBlock {
-    backdrop-filter: none;
+    backdrop-filter: blur(2px);
       animation: 300ms ease-in-out 0s 1 normal none running lobbyloadercont1
 }
 
@@ -1951,7 +1986,7 @@ div > div.GarageCommonStyle-garageContainer > div.GarageCommonStyle-positionCont
 
 .SuppliesComponentStyle-containersBlocks {
     background: rgb(0,0,0,10%);
-    backdrop-filter: blur(3.125em);
+    backdrop-filter: blur(2px);
     outline: 1.5px solid rgb(183 0 255 / 25%);
     box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%)
 }
@@ -2003,7 +2038,7 @@ div > div.GarageCommonStyle-garageContainer > div.GarageCommonStyle-positionCont
 }
 
 .ApplicationLoaderComponentStyle-helpChangeTip {
-    visibility: hidden
+    visibility: visible
 }
 
 .BattleMessagesComponentStyle-message {
@@ -2584,7 +2619,7 @@ body.appendChild(style);
 							removeAnimationFromBackground(node);
 						}
 					});
-				}
+				};
 			});
 		});
 
@@ -2595,6 +2630,39 @@ body.appendChild(style);
 		observer.observe(document.body, observerConfig);
 
 		document.querySelectorAll(".Common-container").forEach(function(element) {
+			applyAnimationToBackground(element);
+		});
+		const observer1 = new MutationObserver(function(mutations) {
+			mutations.forEach(function(mutation) {
+				if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
+					mutation.addedNodes.forEach(function(node) {
+						if (
+							node.nodeType === 1 &&
+							node.classList.contains("ApplicationLoaderComponentStyle-container")
+						) {
+							applyAnimationToBackground(node);
+						}
+					});
+				} else if (mutation.type === "childList" && mutation.removedNodes.length > 0) {
+					mutation.removedNodes.forEach(function(node) {
+						if (
+							node.nodeType === 1 &&
+							node.classList.contains("ApplicationLoaderComponentStyle-container")
+						) {
+							removeAnimationFromBackground(node);
+						}
+					});
+				};
+			});
+		});
+
+		const observerConfig1 = {
+			childList: true,
+			subtree: true,
+		};
+		observer1.observe(document.body, observerConfig1);
+
+		document.querySelectorAll(".ApplicationLoaderComponentStyle-container").forEach(function(element) {
 			applyAnimationToBackground(element);
 		});
 	})();
