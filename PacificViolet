@@ -1,3 +1,15 @@
+// ==UserScript==
+// @name         Pacific Violet Work
+// @namespace    http://tampermonkey.net/
+// @version      0.92
+// @description  
+// @author       大好きだよ 好きだよう
+// @match        https://*.tankionline.com/*
+// @icon         https://flomaster.top/o/uploads/posts/2023-11/1699511166_flomaster-top-p-sirenevaya-babochka-risunok-krasivo-3.png
+// @grant        none
+// ==/UserScript==
+
+
 const css = `
 html, body {
       background: black
@@ -205,7 +217,8 @@ div > div.Common-flexStartAlignStart {
 }
 
 .UserInfoContainerStyle-userNameRank:hover {
-    color: rgb(198 143 255)
+    color: rgb(181 110 255);
+    text-shadow: rgb(212 51 255) 0em 0em 0.375em
 }
 
 .ChatComponentStyle-upMenu {
@@ -321,7 +334,7 @@ div > div.BreadcrumbsComponentStyle-headerContainer > div.Common-flexCenterAlign
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(20deg, transparent, #c700ff, #c100ff, #8500ff, transparent, #8500ff, #c100ff, #c700ff, transparent);
+    background: linear-gradient(135deg, transparent, #c700ff, transparent, #8500ff, transparent, #8500ff, transparent, #c700ff, transparent);
     background-size: 400%;
     opacity: 0;
     filter: blur(40px);
@@ -388,7 +401,7 @@ div > div.BreadcrumbsComponentStyle-headerContainer > div.Common-flexCenterAlign
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(20deg, transparent, #c700ff, #c100ff, #8500ff, transparent, #8500ff, #c100ff, #c700ff, transparent);
+    background: linear-gradient(135deg, transparent, #c700ff, transparent, #8500ff, transparent, #8500ff, transparent, #c700ff, transparent);
     background-size: 400%;
     opacity: 0;
     filter: blur(40px);
@@ -538,14 +551,16 @@ div > div.BreadcrumbsComponentStyle-headerContainer > div.Common-flexCenterAlign
 }
 
 .InvitationWindowsComponentStyle-centerBlock {
-      animation: 0.2s ease-in-out 0s 1 normal none running lobbyloadercont1
+    align-items: center;
+    justify-content: center;
+      animation: 200ms ease-in-out 0s 1 normal none running lobbyloadercont1
 }
 
 .ContextMenuStyle-menu {
     background: rgb(0 0 0 / 15%);
     backdrop-filter: blur(15px);
     border-radius: 15px;
-      animation: 0.2s ease-in-out 0s 1 normal none running lobbyloadercont1
+      animation: 200ms ease-in-out 0s 1 normal none running lobbyloadercont1
 }
 
 .ContextMenuStyle-menuItem.ContextMenuStyle-menuItemRank {
@@ -654,7 +669,8 @@ div > div.ProBattlesComponentStyle-mainContainer > div.Common-flexStartAlignCent
 }
 
 .IconStyle-iconAddBattle {
-    background: rgb(181 110 255)
+    background: rgb(181 110 255);
+    scale: 1.5
 }
 
 .ProBattlesComponentStyle-commonBlockHotkeyV {
@@ -1395,6 +1411,16 @@ div > div > div.FriendListComponentStyle-containerMembers > div > div.SearchInpu
     color: rgb(181 110 255)
 }
 
+.TableComponentStyle-table {
+    align-items: center
+}
+
+.TableComponentStyle-tBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
 .TableComponentStyle-row {
     background: rgba(100, 100, 100, 0.1);
     border-left: 0.15em solid rgb(181 110 255 / 50%)
@@ -1405,6 +1431,8 @@ div > div > div.FriendListComponentStyle-containerMembers > div > div.SearchInpu
 }
 
 .FriendRequestComponentStyle-blockInformationCommunityNoSearch {
+    margin-right: -1.125em;
+    margin-left: 0px;
       animation: 300ms ease-in-out 0s 1 normal none running containerPanelBottom
 }
 
@@ -1433,27 +1461,6 @@ div > div > div.FriendListComponentStyle-containerMembers > div > div.SearchInpu
       animation: 300ms ease-in-out 0s 1 normal none running gradientMenu3
 }
 
-div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.SearchInputComponentStyle-search > div {
-    background: rgba(0, 0, 0, 10%);
-    backdrop-filter: blur(15px);
-    box-shadow: rgba(0, 0, 0, 0) 0em 0em 0em 1px;
-    transition: all 200ms ease-in-out 0s;
-    border-radius: 5px
-}
-
-div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.SearchInputComponentStyle-search > div:hover {
-    scale: 1.025;
-    box-shadow: rgb(128, 42, 218) 0em 0em 0em 0.1em;
-      animation: anim1 200ms ease-in-out;
-      animation-fill-mode: forwards;
-      background: linear-gradient(45deg, transparent 0%, rgb(185, 135, 255, 0.6) 50%, transparent 100%);
-      background-size: 250%
-}
-
-div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.SearchInputComponentStyle-search > div > input {
-    box-shadow: rgb(0, 0, 0) 0em 0em 0em 0px
-}
-
 div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerButtonFriends > div > img {
     visibility: hidden
 }
@@ -1462,21 +1469,8 @@ div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponent
     transition: all 200ms ease-in-out 0s
 }
 
-.FriendRequestComponentStyle-buttonDeclineAll {
-    background: rgba(100, 100, 100, 10%);
-    backdrop-filter: blur(15px);
-    box-shadow: rgba(0, 0, 0, 0) 0em 0em 0em 1px;
-    transition: all 200ms ease-in-out 0s;
-    border-radius: 5px
-}
-
-.FriendRequestComponentStyle-buttonDeclineAll:hover {
-    scale: 1.025;
-    box-shadow: rgb(255, 124, 124) 0em 0em 0em 0.1em;
-      animation: anim1 400ms ease-in-out;
-      animation-fill-mode: forwards;
-      background: linear-gradient(45deg, transparent 0%, rgb(255, 124, 124, 0.6) 50%, transparent 100%);
-      background-size: 250%
+.FriendListComponentStyle-stringCommunity {
+    padding-bottom: 14px
 }
 
 .FriendRequestComponentStyle-buttonDeclineAll span {
@@ -1492,21 +1486,43 @@ div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponent
     text-shadow: rgb(212 51 255) 0em 0em 0.375em;
 }
 
-div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerButtonFriends > div {
-    background: rgba(0, 0, 0, 10%);
-    backdrop-filter: blur(10px);
-    box-shadow: rgba(0, 0, 0, 0) 0em 0em 0em 1px;
-    transition: all 200ms ease-in-out 0s;
-    border-radius: 10px
+div.FriendListComponentStyle-containerNickName > div > span {
+    transition: all 200ms ease-in-out 0s
 }
 
-div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerButtonFriends > div:hover {
-    scale: 1.025;
-    box-shadow: rgb(128, 42, 218) 0em 0em 0em 0.1em;
-      animation: anim2 400ms ease-in-out;
-      animation-fill-mode: forwards;
-      background: linear-gradient(45deg, transparent 0%, rgb(185, 135, 255, 0.6) 50%, transparent 100%);
-      background-size: 250%
+div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerButtonFriends > div,
+div > div.InvitationWindowsComponentStyle-centerBlock > div.InvitationWindowsComponentStyle-buttonsContainer > div.Common-flexCenterAlignCenter.InvitationWindowsComponentStyle-backButton.Font-bold.Font-normal.Common-flexCenterAlignCenter.Common-displayFlex.Common-alignCenter,
+div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.SearchInputComponentStyle-search > div,
+div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerForm > div.Common-flexCenterAlignCenter.FriendListComponentStyle-buttonCloseAddFriends,
+div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerForm > div.SearchInputComponentStyle-search.FriendListComponentStyle-friendSearchInput > div,
+div > div.InvitationWindowsComponentStyle-centerBlock > div.InvitationWindowsComponentStyle-header > div.SearchInputComponentStyle-search > div,
+.FriendRequestComponentStyle-buttonDeclineAll,
+.FriendRequestComponentStyle-buttonDecline,
+.FriendRequestComponentStyle-buttonAccept {
+    transition: all 200ms ease-in-out 0s;
+    border-left: transparent;
+    border-right: transparent;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid rgba(185, 135, 255, 0.15);
+    box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%)
+}
+
+div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerButtonFriends > div:hover,
+div > div.InvitationWindowsComponentStyle-centerBlock > div.InvitationWindowsComponentStyle-buttonsContainer > div.Common-flexCenterAlignCenter.InvitationWindowsComponentStyle-backButton.Font-bold.Font-normal.Common-flexCenterAlignCenter.Common-displayFlex.Common-alignCenter:hover,
+div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.SearchInputComponentStyle-search > div:hover,
+div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerForm > div.Common-flexCenterAlignCenter.FriendListComponentStyle-buttonCloseAddFriends:hover,
+div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerForm > div.SearchInputComponentStyle-search.FriendListComponentStyle-friendSearchInput > div:hover,
+div > div.InvitationWindowsComponentStyle-centerBlock > div.InvitationWindowsComponentStyle-header > div.SearchInputComponentStyle-search > div:hover,
+.FriendRequestComponentStyle-buttonDeclineAll:hover,
+.FriendRequestComponentStyle-buttonDecline:hover,
+.FriendRequestComponentStyle-buttonAccept:hover {
+    background: rgba(255, 255, 255, 0.05)
+}
+
+.FriendRequestComponentStyle-buttonDecline span,
+.FriendRequestComponentStyle-buttonAccept span {
+    font-size: 0.95em
 }
 
 div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerButtonFriends > div:before {
@@ -1517,6 +1533,12 @@ div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponent
     font-size: x-large
 }
 
+div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.SearchInputComponentStyle-search > div > input,
+div > div.InvitationWindowsComponentStyle-centerBlock > div.InvitationWindowsComponentStyle-header > div.SearchInputComponentStyle-search > div > input,
+div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerForm > div.SearchInputComponentStyle-search.FriendListComponentStyle-friendSearchInput > div > input {
+    box-shadow: rgb(0, 0, 0) 0em 0em 0em 0px
+}
+
 .FriendListComponentStyle-substrateRhombus {
     background: transparent;
     box-shadow: rgb(0 0 0 / 0%) 0.438em 0.438em 0.438em 0px
@@ -1525,19 +1547,18 @@ div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponent
 .FriendListComponentStyle-blockList.nickNameClass,
 div > div.InvitationWindowsComponentStyle-centerBlock > div.InvitationWindowsComponentStyle-usersScroll > div.Common-flexStartAlignStretch > div {
     background: rgb(0 0 0/10%);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
-    box-shadow: 0em 0em 0.5em 0.25em rgb(10 10 10 / 25%);
-    outline: 1.5px solid rgb(118, 255, 51, 0%);
+    box-shadow: 0em 0em 0.5em 0.25em rgb(0 0 0 / 15%);
+    outline: 2px solid rgb(118, 255, 51, 0%);
     transition: all 200ms ease-in-out 0s
 }
 
 .FriendListComponentStyle-blockList.nickNameClass:hover,
 div > div.InvitationWindowsComponentStyle-centerBlock > div.InvitationWindowsComponentStyle-usersScroll > div.Common-flexStartAlignStretch > div:hover {
-    transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.025);
     box-shadow: 0em 0em 0.5em 0.25em rgb(118 255 51 / 25%);
-    outline: 1.5px solid rgb(118, 255, 51, 25%)
+    outline: 2px solid rgb(118, 255, 51, 25%)
 }
 
 .FriendListComponentStyle-blockList.nickNameClass:after,
@@ -1583,68 +1604,9 @@ div > div.InvitationWindowsComponentStyle-centerBlock > div.InvitationWindowsCom
     text-shadow: rgb(162, 255, 106) 0em 0em 0.375em;
 }
 
-.FriendRequestComponentStyle-buttonDecline {
-    background: transparent;
-    backdrop-filter: blur(15px);
-    transition: all 200ms ease-in-out 0s
-}
-
-.FriendRequestComponentStyle-buttonDecline:hover {
-    background: rgb(255 135 135 / 25%);
-    scale: 0.985
-}
-
-.FriendRequestComponentStyle-buttonAccept {
-    background: transparent;
-    backdrop-filter: blur(15px);
-    transition: all 200mss ease-in-out 0s
-}
-
-.FriendRequestComponentStyle-buttonAccept:hover {
-    background: rgb(135 255 175 / 25%);
-    scale: 0.985
-}
-
 .FriendRequestComponentStyle-blockInformationCommunity {
     margin-left: 0px;
       animation: 300ms ease-in-out 0s 1 normal none running containerPanelBottom
-}
-
-div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerForm > div.Common-flexCenterAlignCenter.FriendListComponentStyle-buttonCloseAddFriends {
-    background: rgba(0, 0, 0, 10%);
-    backdrop-filter: blur(15px);
-    box-shadow: rgba(0, 0, 0, 0) 0em 0em 0em 1px;
-    transition: all 200ms ease-in-out 0s;
-    border-radius: 5px
-}
-
-div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerForm > div.Common-flexCenterAlignCenter.FriendListComponentStyle-buttonCloseAddFriends:hover {
-    scale: 1.025;
-    box-shadow: rgb(255, 124, 124) 0em 0em 0em 0.1em;
-      animation: anim1 400ms ease-in-out;
-      animation-fill-mode: forwards;
-      background: linear-gradient(45deg, transparent 0%, rgb(255, 124, 124, 0.6) 50%, transparent 100%);
-      background-size: 250%
-}
-
-div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerForm > div.SearchInputComponentStyle-search.FriendListComponentStyle-friendSearchInput > div {
-    background: rgba(0, 0, 0, 10%);
-    backdrop-filter: blur(15px);
-    box-shadow: rgba(0, 0, 0, 0) 0em 0em 0em 1px;
-    transition: all 200ms ease-in-out 0s;
-    border-radius: 5px
-}
-
-div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerForm > div.SearchInputComponentStyle-search.FriendListComponentStyle-friendSearchInput > div:hover {
-    box-shadow: rgb(128, 42, 218) 0em 0em 0em 0.1em;
-      animation: anim1 400ms ease-in-out;
-      animation-fill-mode: forwards;
-      background: linear-gradient(45deg, transparent 0%, rgb(185, 135, 255, 0.6) 50%, transparent 100%);
-      background-size: 250%
-}
-
-div > div.FriendListComponentStyle-containerFriends > div.FriendRequestComponentStyle-blockInformationCommunity > div.FriendListComponentStyle-containerForm > div.SearchInputComponentStyle-search.FriendListComponentStyle-friendSearchInput > div > input {
-    box-shadow: rgb(0 0 0 / 0%) 0em 0em 0em 0px
 }
 
 div > div.EventBattlePassLobbyComponentStyle-buttonEventBattlePass > div.EventBattlePassLobbyComponentStyle-commonBlockProgressBar > div > div > div {
@@ -2098,50 +2060,16 @@ div > div.GarageCommonStyle-garageContainer > div.GarageCommonStyle-positionCont
     overflow: visible
 }
 
-div > div.InvitationWindowsComponentStyle-centerBlock > div.InvitationWindowsComponentStyle-buttonsContainer > div.Common-flexCenterAlignCenter.InvitationWindowsComponentStyle-backButton.Font-bold.Font-normal.Common-flexCenterAlignCenter.Common-displayFlex.Common-alignCenter {
-    background: rgba(0, 0, 0, 10%);
-    backdrop-filter: blur(15px);
-    box-shadow: rgba(0, 0, 0, 0) 0em 0em 0em 1px;
-    transition: all 200ms ease-in-out 0s;
-    border-radius: 5px
-}
-
-div > div.InvitationWindowsComponentStyle-centerBlock > div.InvitationWindowsComponentStyle-buttonsContainer > div.Common-flexCenterAlignCenter.InvitationWindowsComponentStyle-backButton.Font-bold.Font-normal.Common-flexCenterAlignCenter.Common-displayFlex.Common-alignCenter:hover {
-    scale: 1.025;
-    box-shadow: rgb(191, 213, 255) 0em 0em 0em 2px;
-      animation: anim2 400ms ease-in-out;
-      animation-fill-mode: forwards;
-      background: linear-gradient(45deg, transparent 0%, rgb(191 213 255 / 50%) 50%, transparent 100%);
-      background-size: 250%
-}
-
 .InvitationWindowsComponentStyle-typeListContainer {
     visibility: hidden
 }
 
-div > div.InvitationWindowsComponentStyle-centerBlock > div.InvitationWindowsComponentStyle-header > div.SearchInputComponentStyle-search > div {
-    background: rgba(0, 0, 0, 10%);
-    backdrop-filter: blur(15px);
-    box-shadow: rgba(0, 0, 0, 0) 0em 0em 0em 1px;
-    transition: all 200ms ease-in-out 0s;
-    border-radius: 5px
-}
-
-div > div.InvitationWindowsComponentStyle-centerBlock > div.InvitationWindowsComponentStyle-header > div.SearchInputComponentStyle-search > div:hover {
-    scale: 1.025;
-    box-shadow: rgb(128, 42, 218) 0em 0em 0em 0.1em;
-      animation: anim1 400ms ease-in-out;
-      animation-fill-mode: forwards;
-      background: linear-gradient(45deg, transparent 0%, rgb(185, 135, 255, 0.6) 50%, transparent 100%);
-      background-size: 250%
-}
-
-div > div.InvitationWindowsComponentStyle-centerBlock > div.InvitationWindowsComponentStyle-header > div.SearchInputComponentStyle-search > div > input {
-    box-shadow: rgba(0, 0, 0, 0) 0em 0em 0em 1px
-}
-
 .Common-flexCenterAlignCenter.InvitationWindowsComponentStyle-inviteButton.Font-bold.Font-normal.Common-flexCenterAlignCenter.Common-displayFlex.Common-alignCenter {
-    background: rgba(0, 0, 0, 10%)
+    background: rgb(0 0 0/10%);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    outline: 2px solid rgb(118, 255, 51, 15%);
+    transition: all 200ms ease-in-out 0s
 }
 
 .BattlePickComponentStyle-timerButton {
