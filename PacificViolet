@@ -1,24 +1,60 @@
-const css = `
 html, body {
       background: black
 }
+
+.StartScreenComponentStyle-mainContainer {
+    animation: 2s ease-in-out 0s 1 normal none running containerPanelBottom
+}
+
+.StartScreenComponentStyle-loadingBlock {
+    flex-direction: column
+}
+
+.StartScreenComponentStyle-loadingBlock:before {
+    content: 'Pacific Violet v1.14';
+    width: 100%;
+    color: white;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    cursor: default;
+    font-family: RubikMedium
+}
+
+.StartScreenComponentStyle-text {
+    visibility: hidden
+}
+
+div > canvas {
+    pointer-events: auto
+}
+
 .Common-visible {
-      transition: none;
+    transition: none;
+    pointer-events: auto;
       animation: 400ms ease-in-out 0s 1 normal none running gradientMenu2
 }
 
 .Common-container {
-      background: linear-gradient(15deg, #37005b50, #0000008a, #38005550, #00000050, #37005b50, #00000050, #38005550, #0000008a);
+      background: linear-gradient(15deg, #37005b50, #00000050, #38005550, #00000050, #37005b50, #00000050, #38005550, #00000050);
       animation: gradient 40s ease-in-out infinite;
       background-size: 600%
 }
+
+#root > div > div
 
 .Common-entranceBackground {
     background-image: url(-);
 }
 
-#modal-root > div {
-    z-index: 2
+div.BattleComponentStyle-canvasContainer > div.Common-container {
+      background: linear-gradient(15deg, #37005b, #000000, #380055, #000000, #37005b, #000000, #380055, #000000);
+      animation: gradient 40s ease-in-out infinite;
+      background-size: 600%
 }
 
 .ModalStyle-rootHover {
@@ -34,7 +70,7 @@ html, body {
 }
 
 .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn:before {
-    content: 'Pacific Violet 1.13';
+    content: 'Pacific Violet 1.14';
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2374,12 +2410,13 @@ body.appendChild(style);
 	(function() {
 		const styleBlock = document.createElement("style");
 		styleBlock.innerHTML = `
-			.canvasWrapper {
+			.Snows {
 				position: fixed;
 				top: 0;
 				left: 0;
 				opacity: 1;
                 z-index: -1;
+                filter: blur(1px)
 			}
 
 			canvas {
@@ -2402,7 +2439,7 @@ body.appendChild(style);
 				this.Y += (this.SY / start);
 
 				this.W = 2;
-				this.H = 1;
+				this.H = 2;
 
 				this.age = 0;
 				this.dies = 500;
@@ -2420,8 +2457,8 @@ body.appendChild(style);
 				this.X += this.SX;
 				this.Y += this.SY;
 
-				this.SX += this.SX / (1500 / acceleration);
-				this.SY += this.SY / (1500 / acceleration);
+				this.SX += this.SX / (5000 / acceleration);
+				this.SY += this.SY / (5000 / acceleration);
 
 				this.age++;
 
@@ -2453,10 +2490,10 @@ body.appendChild(style);
 			canvas = document.createElement("canvas");
 			canvas.id = "field";
 
-			const canvasWrapper = document.createElement("div");
-			canvasWrapper.className = "canvasWrapper";
-			loadBg.appendChild(canvasWrapper);
-			canvasWrapper.appendChild(canvas);
+			const Snows = document.createElement("div");
+			Snows.className = "Snows";
+			loadBg.appendChild(Snows);
+			Snows.appendChild(canvas);
 
 			canvas.getContext("2d").fillStyle = "rgba(0, 0, 0, 0.8)";
 			canvas.getContext("2d").fillRect(0, 0, canvas.width, canvas.height);
