@@ -1,33 +1,17 @@
+// ==UserScript==
+// @name         Pacific Violet Work v1.22 idvDev
+// @namespace    http://tampermonkey.net/
+// @version      v1.22
+// @description  none
+// @author       https://vk.com/legionlegionlegionlegionlegion
+// @match        https://*.tankionline.com/*
+// @icon         https://cdn.discordapp.com/attachments/1200939525120217240/1200941054698979338/pacificviolettheme.png
+// @grant        none
+// ==/UserScript==
+
 const css = `
 html, body {
       background: black
-}
-
-.StartScreenComponentStyle-mainContainer {
-    animation: 2s ease-in-out 0s 1 normal none running containerPanelBottom
-}
-
-.StartScreenComponentStyle-loadingBlock {
-    flex-direction: column
-}
-
-.StartScreenComponentStyle-loadingBlock:before {
-    content: 'Pacific Violet v1.21';
-    width: 100%;
-    color: white;
-    height: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    cursor: default;
-    font-family: RubikMedium
-}
-
-.StartScreenComponentStyle-text {
-    visibility: hidden
 }
 
 div > div.Common-flexStartAlignStart {
@@ -36,20 +20,6 @@ div > div.Common-flexStartAlignStart {
 
 div > div.BattleCreateComponentStyle-mainContainer.ProBattlesComponentStyle-mainContainer.Common-flexStartAlignStart {
     justify-content: flex-start
-}
-
-div > div.GarageCommonStyle-garageContainer > div > div.GarageCommonStyle-positionContentAlteration.GarageCommonStyle-subMenu > div.BattleCreateComponentStyle-scrollBattlePick.Common-scrollBarVisible > div > div {
-    backdrop-filter: blur(2px);
-    box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%);
-    border: 2px solid rgba(185, 135, 255, 0.15);
-    border-radius: 10px;
-    transition: all 200ms ease-in-out 0s;
-    background: rgb(0, 0, 0, 10%)
-}
-
-div > div.GarageCommonStyle-garageContainer > div > div.GarageCommonStyle-positionContentAlteration.GarageCommonStyle-subMenu > div.BattleCreateComponentStyle-scrollBattlePick.Common-scrollBarVisible > div > div:hover {
-    background: rgb(255, 255, 255, 0.05);
-    cursor: pointer
 }
 
 div > canvas {
@@ -63,7 +33,7 @@ div > canvas {
 }
 
 .Common-container {
-      background: linear-gradient(15deg, #37005b50, #00000050, #38005550, #00000050, #37005b50, #00000050, #38005550, #00000050);
+      background: linear-gradient(15deg, #37005b70, #00000070, #38005570, #00000070, #37005b70, #00000070, #38005570, #00000070);
       animation: gradient 40s ease-in-out infinite;
       background-size: 600%
 }
@@ -96,7 +66,7 @@ div.BattleComponentStyle-canvasContainer > div.Common-container {
 }
 
 .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn:before {
-    content: 'Pacific Violet v1.21';
+    content: 'Pacific Violet v1.22';
     z-index: 99;
     display: flex;
     align-items: center;
@@ -105,9 +75,7 @@ div.BattleComponentStyle-canvasContainer > div.Common-container {
     color: rgb(255, 255, 255, 100%);
     font-family: RubikMedium;
     text-transform: uppercase;
-    font-size: 200%;
-    height: 180px;
-    width: 50%;
+    font-size: 200%
 }
 
 .ApplicationLoaderComponentStyle-logo {
@@ -145,6 +113,48 @@ div.BattleComponentStyle-canvasContainer > div.Common-container {
 div.ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn > div.Common-flexCenterAlignCenter > span {
     visibility: visible;
     margin-bottom: 40.675em;
+}
+
+.StartScreenComponentStyle-mainContainer {
+    animation: 2s ease-in-out 0s 1 normal none running containerPanelBottom
+}
+
+.StartScreenComponentStyle-loadingBlock {
+    flex-direction: column
+}
+
+.StartScreenComponentStyle-loadingBlock:before {
+    content: 'Pacific Violet v1.22';
+    width: 100%;
+    color: white;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    cursor: default;
+    font-family: RubikMedium
+}
+
+.StartScreenComponentStyle-loadingBlock:after {
+    content: 'Нажмите любую кнопку';
+    width: 100%;
+    color: white;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    text-transform: uppercase;
+    cursor: default;
+    font-family: RubikMedium
+}
+
+.StartScreenComponentStyle-text {
+    visibility: hidden
 }
 
 .LobbyLoaderComponentStyle-container {
@@ -313,6 +323,7 @@ div > div > div > div > div > div.UserInfoContainerStyle-containerProgressMainSc
 .BreadcrumbsComponentStyle-headerContainer {
     backdrop-filter: blur(2px);
     background: rgb(0,0,0,5%);
+    transition: all 200ms ease-in-out 0s;
     align-items: center;
     min-height: 7em;
     height: 7em;
@@ -324,6 +335,10 @@ div > div > div > div > div > div.UserInfoContainerStyle-containerProgressMainSc
     border-bottom-left-radius: 15px;
     box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%);
       animation: 300ms ease-in-out 0s 1 normal none running containerPanelTop
+}
+
+.BreadcrumbsComponentStyle-headerContainer:hover {
+    background: rgb(255,255,255,0.025)
 }
 
 .GarageMenuComponentStyle-garageMenuContainer, .ProBattlesComponentStyle-navigationBlock {
@@ -477,7 +492,7 @@ div > div.BreadcrumbsComponentStyle-headerContainer > div.Common-flexCenterAlign
 .ListItemsComponentStyle-itemsListContainer {
     background: rgb(0, 0, 0, 10%);
     backdrop-filter: blur(2px);
-    outline: 1.5px solid rgb(183 0 255 / 25%);
+    outline: 2px solid rgb(183 0 255 / 15%);
     box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%)
 }
 
@@ -594,6 +609,7 @@ div > div.BreadcrumbsComponentStyle-headerContainer > div.Common-flexCenterAlign
 }
 
 .ScrollingCardsComponentStyle-scrollCardPick {
+    padding-top: 1em;
       animation: 200ms ease-in-out 0s 1 normal none running scrollingcards
 }
 
@@ -772,6 +788,10 @@ div > div.Common-flexStartAlignStart > div.ProBattlesComponentStyle-commonBlockH
     top: 0em
 }
 
+div > div.ProBattlesComponentStyle-mainContainer > div.Common-flexCenterAlignStart.Common-alignSelfStart > div > div > div {
+    transition: all 200ms ease-in-out 0s
+}
+
 .ProBattlesComponentStyle-commonBlockHotkeyV {
     display: flex;
     align-items: center;
@@ -886,6 +906,11 @@ div > div.ProBattlesComponentStyle-mainContainer > div.Common-flexStartAlignCent
     scale: 1.5
 }
 
+div > div.ProBattlesComponentStyle-mainContainer > div.Common-flexStartAlignCenterColumn > div.Common-flexStartAlignStretchColumn > div.Common-flexStartAlignCenter.ProBattleCommonStyleMobile-buttonContainer > div.Common-flexCenterAlignCenterColumn > div > h3,
+div > div.ProBattlesComponentStyle-mainContainer > div.Common-flexStartAlignCenterColumn > div.Common-flexStartAlignStretchColumn > div.Common-flexStartAlignCenter.ProBattleCommonStyleMobile-buttonContainer > div.Common-flexCenterAlignCenter > div > h3 {
+    visibility: hidden
+}
+
 .Common-flexCenterAlignCenter.JoinToBattleComponentStyle-newButtonJoinA.JoinToBattleComponentStyle-buttonJoin > span {
     color: rgb(181 110 255);
     text-shadow: rgb(212 51 255) 0em 0em 0.375em
@@ -936,28 +961,24 @@ div > div.ProBattlesComponentStyle-mainContainer > div.Common-flexStartAlignCent
 div > div.ScrollingCardsComponentStyle-blockCenter > div > div > div.Common-backgroundImageCover,
 div > div.ScrollingCardsComponentStyle-scrollCardPick.Common-scrollBarVisible > div.ScrollingCardsComponentStyle-scrollCard.cardImg > div.Common-backgroundImageCover,
 div > div > div.BattlePickComponentStyle-cardContentRight > div.BattlePickComponentStyle-commonStyleBlock.cardImgEvents > div.BattlePickComponentStyle-cardImgEvent.Common-backgroundImageContain.Common-backgroundImage {
-    box-shadow: inset 0em 0em 0.5em 0.25em rgb(0 0 0 /50%);
-    background-blend-mode: color-dodge
+    box-shadow: inset 0em 0em 0.5em 0.25em rgb(0 0 0 / 50%);
+    background-blend-mode: color-dodge;
+    filter: brightness(1.25)
 }
 
 .ScrollingCardsComponentStyle-scrollCard, .FormatsSectionComponentStyle-selectedCard, .FormatsSectionComponentStyle-unSelectedCard, .BattlePickComponentStyle-commonStyleBlock.cardImgEvents {
     transition: all 200ms ease-in-out 0s;
-    box-shadow: 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%);
-    outline: 1.75px solid rgb(0, 255, 0, 15%)
+    box-shadow: 0em 0em 0.5em 0.25em rgb(0 0 0 / 50%);
+    outline: 2px solid rgb(0, 255, 0, 15%)
 }
 
 .ScrollingCardsComponentStyle-scrollCard:hover, .FormatsSectionComponentStyle-selectedCard:hover, .FormatsSectionComponentStyle-unSelectedCard:hover, .BattlePickComponentStyle-commonStyleBlock.cardImgEvents:hover {
-    box-shadow: 0em 0em 0.5em 0.25em rgb(0 255 0 / 25%);
-    filter: brightness(1.35);
-    transform: translateY(-7.5px)
-}
-
-.ScrollingCardsComponentStyle-scrollCardPick {
-    padding-top: 1em
+    box-shadow: 0em 0em 0.5em 0.25em rgb(0 255 0 / 50%);
+    filter: brightness(1.35)
 }
 
 .ScrollingCardsComponentStyle-blockCenter {
-      animation: 250ms ease-in-out 0s 1 normal none running scrollingcards
+      animation: 200ms ease-in-out 0s 1 normal none running scrollingcards
 }
 
 .ScrollingCardsComponentStyle-selectCard {
@@ -1312,7 +1333,9 @@ div > div > div.FriendListComponentStyle-containerMembers > div > div.SearchInpu
     background: rgba(100, 100, 100, 0.1);
     transition: all 200ms ease-in-out 0s;
     border-radius: 10px;
-    backdrop-filter: blur(2px)
+    backdrop-filter: blur(2px);
+    border: 2px solid rgba(185, 135, 255, 0.15);
+    box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%)
 }
 
 .ClanHeaderComponentStyle-blockInform:hover, .ClanInfoComponentStyle-messageClan:hover {
@@ -1337,22 +1360,13 @@ div > div > div.FriendListComponentStyle-containerMembers > div > div.SearchInpu
     background: radial-gradient(50% 100% at 50% 100%, rgb(50 50 50) 0%, rgb(0 0 0) 100%)
 }
 
-.ClanCommonStyle-row {
-    background: rgba(100, 100, 100, 0.1);
-    transition: all 200ms ease-in-out 0s;
-    backdrop-filter: blur(2px);
-    border-left: 0.15em solid rgb(181 110 255 / 50%)
-}
-
-.ClanCommonStyle-row:hover {
-    background: rgba(255, 255, 255, 0.05)
-}
-
 .ClanStatisticsComponentStyle-areCommon {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(100, 100, 100, 0);
     transition: all 200ms ease-in-out 0s;
-    backdrop-filter: blur(2px);
-    border-left: 0.2em solid rgb(181, 110, 255, 50%)
+    border-left: none;
+    border: 2px solid rgba(185, 135, 255, 0.15);
+    box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%);
+    border-radius: 10px;
 }
 
 .ClanStatisticsComponentStyle-areCommon:hover {
@@ -1399,9 +1413,32 @@ div > div > div.FriendListComponentStyle-containerMembers > div > div.SearchInpu
     align-items: center
 }
 
-.TableComponentStyle-row {
+.TableComponentStyle-row, .ClanCommonStyle-row {
     background: rgba(100, 100, 100, 0.1);
-    border-left: 0.15em solid rgb(181 110 255 / 50%)
+    transition: all 200ms ease-in-out 0s;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: 2px solid rgba(185, 135, 255, 0.15);
+    box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%);
+    margin-bottom: 0.5em
+}
+
+.ClanCommonStyle-rowEmpty {
+    background: rgba(100, 100, 100, 0.05);
+    opacity: 0.5;
+    transition: all 200ms ease-in-out 0s;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: 2px solid rgba(185, 135, 255, 0.05);
+    box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%)
+}
+
+.TableComponentStyle-row:hover, .ClanCommonStyle-row:hover {
+    background: rgba(100, 100, 100, 0.25)
+}
+
+.ClanCommonStyle-rowEmpty:hover {
+    background: rgba(100, 100, 100, 0.125)
 }
 
 .TableComponentStyle-table, .ClanInfoComponentStyle-messageClan {
@@ -1419,11 +1456,23 @@ div > div > div.FriendListComponentStyle-containerMembers > div > div.SearchInpu
       animation: 300ms ease-in-out 0s 1 normal none running containerPanelBottom
 }
 
+.TableComponentStyle-table thead {
+    margin-bottom: 1em
+}
+
+.TableComponentStyle-table thead tr {
+    align-items: center
+}
+
 .TableComponentStyle-table thead tr th {
     background: rgba(100, 100, 100, 0.1);
-    border-left: 0.15em solid rgb(181 110 255 / 50%);
     height: 2em;
-    transition: all 200ms ease-in-out 0s
+    margin: 1em;
+    transition: all 200ms ease-in-out 0s;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: 2px solid rgba(185, 135, 255, 0.15);
+    box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%)
 }
 
 .TableComponentStyle-table thead tr th:hover {
@@ -1646,7 +1695,7 @@ div > div.EventBattlePassLobbyComponentStyle-buttonEventBattlePass > div.EventBa
 }
 
 .EventBattlePassLobbyComponentStyle-commonBlockProgressBar {
-    background-color: rgb(0 0 0 / 15%)
+    background-color: rgb(0 0 0 / 10%)
 }
 
 .EventBattlePassLobbyComponentStyle-buttonEventBattlePass:after {
@@ -1656,7 +1705,7 @@ div > div.EventBattlePassLobbyComponentStyle-buttonEventBattlePass > div.EventBa
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, transparent, #ff8800, #ffd400, #fbff00, transparent, #fbff00, #ffd400, #ff8800, transparent);
+    background: linear-gradient(135deg, transparent, rgb(255 200 0), transparent, rgb(255 200 0), transparent, rgb(255 200 0), transparent);
     background-size: 700%;
     opacity: 0;
     filter: blur(40px);
@@ -1664,7 +1713,7 @@ div > div.EventBattlePassLobbyComponentStyle-buttonEventBattlePass > div.EventBa
     z-index: -1;
     transform: scale(1.15);
     pointer-events: none;
-    animation: eff 40s ease-in-out infinite;
+    animation: eff 60s ease-in-out infinite;
     animation-play-state: paused
 }
 
@@ -1699,7 +1748,7 @@ div > div.EventBattlePassLobbyComponentStyle-buttonEventBattlePass > div.EventBa
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, transparent, #ff8800, #ffd400, #fbff00, transparent, #fbff00, #ffd400, #ff8800, transparent);
+    background: linear-gradient(135deg, transparent, rgb(255 200 0), transparent, rgb(255 200 0), transparent, rgb(255 200 0), transparent);
     background-size: 700%;
     opacity: 0;
     filter: blur(40px);
@@ -1707,7 +1756,7 @@ div > div.EventBattlePassLobbyComponentStyle-buttonEventBattlePass > div.EventBa
     z-index: -1;
     transform: scale(1.15);
     pointer-events: none;
-    animation: eff 40s ease-in-out infinite;
+    animation: eff 60s ease-in-out infinite;
     animation-play-state: paused
 }
 
@@ -1769,6 +1818,7 @@ div > div.AnnouncementHomeScreenComponentStyle-mainContainer > div.AnnouncementH
 
 .AnnouncementHomeScreenComponentStyle-mainContainer:hover {
     transform: translateY(-5px);
+    border: 1px solid rgba(255,255,255,0);
     box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 50%), 0em 0em 0.5em 0.25em rgb(255 225 0 / 25%)
 }
 
@@ -1779,13 +1829,12 @@ div > div.AnnouncementHomeScreenComponentStyle-mainContainer > div.AnnouncementH
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, transparent, #ff8800, #ffd400, #fbff00, transparent, #fbff00, #ffd400, #ff8800, transparent);
-    background-size: 700%;
+    background: linear-gradient(135deg, transparent, rgb(255 200 0), transparent, rgb(255 200 0), transparent, rgb(255 200 0), transparent);
+    background-size: 800%;
     opacity: 0;
     filter: blur(40px);
     transition: all 600ms ease-in-out 0s;
     z-index: -1;
-    animation: eff 40s ease-in-out infinite;
     pointer-events: none;
     animation-play-state: paused
 }
@@ -1804,7 +1853,7 @@ div > div.AnnouncementHomeScreenComponentStyle-mainContainer > div.AnnouncementH
     background: rgba(0,0,0,0.10);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    outline: 1.5px solid rgb(183, 0, 255, 0.25);
+    outline: 2px solid rgb(183, 0, 255, 0.15);
     box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 /50%);
     transition: all 200ms ease-in-out 0s
 }
@@ -1819,8 +1868,8 @@ div > div.AnnouncementHomeScreenComponentStyle-mainContainer > div.AnnouncementH
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(20deg, transparent, #c700ff, #c100ff, #8500ff, transparent, #8500ff, #c100ff, #c700ff, transparent);
-    background-size: 400%;
+    background: linear-gradient(135deg, transparent, #c700ff, transparent, #8500ff, transparent, #c700ff, transparent, #8500ff, transparent);
+    background-size: 600%;
     opacity: 0;
     filter: blur(40px);
     transition: all 600ms ease-in-out 0s;
@@ -1875,8 +1924,8 @@ div > div.GarageCommonStyle-garageContainer > div.GarageCommonStyle-positionCont
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(20deg, transparent, #c700ff, #c100ff, #8500ff, transparent, #8500ff, #c100ff, #c700ff, transparent);
-    background-size: 600%;
+    background: linear-gradient(135deg, transparent, #c700ff, transparent, #8500ff, transparent, #c700ff, transparent, #8500ff, transparent);
+    background-size: 800%;
     opacity: 0;
     filter: blur(60px);
     transition: all 600ms ease-in-out 0s;
@@ -1957,6 +2006,20 @@ div > div.GarageCommonStyle-garageContainer > div.GarageCommonStyle-positionCont
     text-shadow: rgb(255 255 255) 0em 0em 0.375em
 }
 
+div > div.GarageCommonStyle-garageContainer > div > div.GarageCommonStyle-positionContentAlteration.GarageCommonStyle-subMenu > div.BattleCreateComponentStyle-scrollBattlePick.Common-scrollBarVisible > div > div {
+    backdrop-filter: blur(2px);
+    box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%);
+    border: 2px solid rgba(185, 135, 255, 0.15);
+    border-radius: 10px;
+    transition: all 200ms ease-in-out 0s;
+    background: rgb(0, 0, 0, 10%)
+}
+
+div > div.GarageCommonStyle-garageContainer > div > div.GarageCommonStyle-positionContentAlteration.GarageCommonStyle-subMenu > div.BattleCreateComponentStyle-scrollBattlePick.Common-scrollBarVisible > div > div:hover {
+    background: rgb(255, 255, 255, 0.05);
+    cursor: pointer
+}
+
 .UsersTableStyle-rowBattle {
     background: rgb(0 0 0 / 10%);
     backdrop-filter: blur(2px)
@@ -1981,13 +2044,16 @@ div > div.GarageCommonStyle-garageContainer > div.GarageCommonStyle-positionCont
 }
 
 .SuppliesComponentStyle-commonBlockSupplies {
-    width: 100%
+    width: 95%
 }
 
 .SuppliesComponentStyle-containersBlocks {
     background: rgb(0,0,0,10%);
+    transition: all 200ms ease-in-out 0s;
     backdrop-filter: blur(2px);
-    outline: 1.5px solid rgb(183 0 255 / 25%);
+    outline: 2px solid rgb(183 0 255 / 15%);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
     box-shadow: inset 0 0em 0.5em 0.25em rgb(0 0 0 / 25%), 0em 0em 0.5em 0.25em rgb(0 0 0 / 25%)
 }
 
@@ -2021,12 +2087,6 @@ div > div.GarageCommonStyle-garageContainer > div.GarageCommonStyle-positionCont
     transition: all 0.2s ease-in-out 0s;
     box-shadow: rgba(255, 255, 255, 0%) 0em 0em 0em 1px;
     background: transparent
-}
-
-.BattlePickComponentStyle-styleIsEnableBlock:hover {
-    transition: all 0.2s ease-in-out 0s;
-    transform: translateY(-7.5px);
-    box-shadow: rgb(120, 255, 50) 0em 0em 0em 2px
 }
 
 .LockableContainersComponentStyle-rightPane {
@@ -2437,228 +2497,205 @@ style.appendChild(document.createTextNode(css));
 
 body.appendChild(style);
 
-	(function() {
-		const styleBlock = document.createElement("style");
-		styleBlock.innerHTML = `
-			.Snows {
-				position: fixed;
-				top: 0;
-				left: 0;
-				opacity: 1;
-                z-index: -1;
-                filter: blur(1px)
-			}
+(function() {
+const Background = document.createElement("style");
+Background.innerHTML = `
+.Snows {
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 1;
+    z-index: -1;
+    filter: blur(1px)
+}
+Snows {
+	display: flex;
+	position: absolute;
+    pointer-events: none;
+}
+`;
 
-			canvas {
-				display: flex;
-				position: absolute;
-                pointer-events: none;
-			}
-		`;
-		document.head.appendChild(styleBlock);
+document.head.appendChild(Background);
+  const snowflakes = {};
+  let snowflakeIndex = 0;
+  let numsnowflakes = 0;
+  let acceleration = 1;
+  let BG;
+  let snowflakesToDraw;
 
-		class Star {
-			constructor(canvas) {
-				this.X = canvas.width / 2;
-				this.Y = canvas.height / 400;
-				this.SX = Math.random() * 10 - 5;
-				this.SY = Math.random() * 10 - 5;
+class Snowflake {
+	constructor(BG) {
+		this.X = BG.width / 2;
+		this.Y = BG.height / 3500;
+		this.SX = Math.random() * 10 - 5;
+		this.SY = Math.random() * 7 - 5;
+		  const start = BG.width > BG.height ? BG.width : BG.height;
+		this.X += (this.SX * start);
+		this.Y += (this.SY / start);
+		this.W = 3;
+		this.H = 3;
+		this.age = 0;
+		this.dies = 500;
+	      snowflakeIndex++;
+		  snowflakes[snowflakeIndex] = this;
+		this.ID = snowflakeIndex;
+		this.C = "#ffffff";
+}
 
-				const start = canvas.width > canvas.height ? canvas.width : canvas.height;
-				this.X += (this.SX * start);
-				this.Y += (this.SY / start);
+draw() {
+		  if (!BG) return;
+		this.X += this.SX;
+		this.Y += this.SY;
+		this.SX += this.SX / (5000 / acceleration);
+		this.SY += this.SY / (5000 / acceleration);
+		this.age++;
+		  if (
+		this.X + this.W < 4 ||
+		this.X > BG.width ||
+		this.Y + this.H < 4 ||
+		this.Y > BG.height
+		     ) {
+		delete snowflakes[this.ID];
+		numsnowflakes--;
+}
+		  BG.getContext("2d").fillStyle = this.C;
+		  BG.getContext("2d").fillRect(this.X, this.Y, this.W, this.H);
+	}
+}
 
-				this.W = 2;
-				this.H = 2;
+function applyAnimationToBackground(loadBg) {
+	  if (!loadBg) return;
+	BG = document.createElement("canvas");
+	BG.id = "field";
+	  const Snows = document.createElement("div");
+	Snows.className = "Snows";
+	loadBg.appendChild(Snows);
+	Snows.appendChild(BG);
+	BG.getContext("2d").fillStyle = "rgba(0, 0, 0, 0.8)";
+	BG.getContext("2d").fillRect(0, 0, BG.width, BG.height);
+	BG.width = loadBg.clientWidth;
+	BG.height = loadBg.clientHeight;
+	snowflakesToDraw = (BG.width * BG.height) / 5000;
 
-				this.age = 0;
-				this.dies = 500;
+function draw() {
+			if (!loadBg) {
+		  clearInterval(animationInterval);
+			return;
+		}
+			if (!BG) {
+		  clearInterval(animationInterval);
+			return;
+		}
+			if (!BG.getContext) {
+		  clearInterval(animationInterval);
+			return;
+		}
+			if (BG.width !== loadBg.clientWidth) {
+		  BG.width = loadBg.clientWidth;
+		}
+			if (BG.height !== loadBg.clientHeight) {
+		  BG.height = loadBg.clientHeight;
+		}
+		  BG.getContext("2d").fillStyle = "rgba(0, 0, 0, 0.8)";
+		  BG.getContext("2d").fillRect(0, 0, BG.width, BG.height);
+			for (let i = numsnowflakes; i < snowflakesToDraw; i++) {
+		  new Snowflake(BG);
+		      numsnowflakes++;
+		}
 
-				starIndex++;
-				stars[starIndex] = this;
+			for (const star in snowflakes) {
+		      snowflakes[star].draw();
+		}
+	}
 
-				this.ID = starIndex;
-				this.C = "#ffffff";
-			}
+	const animationInterval = setInterval(draw, 10);
+  loadBg.dataset.animationInterval = animationInterval;
+  loadBg.dataset.canvasId = BG.id;
+}
 
-			draw() {
-				if (!canvas) return;
+function removeAnimationFromBackground(loadBg) {
+		if (!loadBg) return;
 
-				this.X += this.SX;
-				this.Y += this.SY;
+		const animationInterval = loadBg.dataset.animationInterval;
+		const canvasId = loadBg.dataset.canvasId;
 
-				this.SX += this.SX / (5000 / acceleration);
-				this.SY += this.SY / (5000 / acceleration);
+		clearInterval(animationInterval);
 
-				this.age++;
-
-				if (
-					this.X + this.W < 4 ||
-					this.X > canvas.width ||
-					this.Y + this.H < 4 ||
-					this.Y > canvas.height
-				) {
-					delete stars[this.ID];
-					numStars--;
-				}
-
-				canvas.getContext("2d").fillStyle = this.C;
-				canvas.getContext("2d").fillRect(this.X, this.Y, this.W, this.H);
+		if (canvasId) {
+			const canvasElement = document.getElementById(canvasId);
+			if (canvasElement) {
+				canvasElement.parentNode.remove();
 			}
 		}
 
-		const stars = {};
-		let starIndex = 0;
-		let numStars = 0;
-		let acceleration = 1;
-		let canvas;
-		let starsToDraw;
+		    delete loadBg.dataset.animationInterval;
+		    delete loadBg.dataset.canvasId;
+}
 
-		function applyAnimationToBackground(loadBg) {
-			if (!loadBg) return;
-
-			canvas = document.createElement("canvas");
-			canvas.id = "field";
-
-			const Snows = document.createElement("div");
-			Snows.className = "Snows";
-			loadBg.appendChild(Snows);
-			Snows.appendChild(canvas);
-
-			canvas.getContext("2d").fillStyle = "rgba(0, 0, 0, 0.8)";
-			canvas.getContext("2d").fillRect(0, 0, canvas.width, canvas.height);
-
-			canvas.width = loadBg.clientWidth;
-			canvas.height = loadBg.clientHeight;
-
-			starsToDraw = (canvas.width * canvas.height) / 5000;
-
-			function draw() {
-				if (!loadBg) {
-					clearInterval(animationInterval);
-					return;
-				}
-
-				if (!canvas) {
-					clearInterval(animationInterval);
-					return;
-				}
-
-				if (!canvas.getContext) {
-					clearInterval(animationInterval);
-					return;
-				}
-
-				if (canvas.width !== loadBg.clientWidth) {
-					canvas.width = loadBg.clientWidth;
-				}
-
-				if (canvas.height !== loadBg.clientHeight) {
-					canvas.height = loadBg.clientHeight;
-				}
-
-				canvas.getContext("2d").fillStyle = "rgba(0, 0, 0, 0.8)";
-				canvas.getContext("2d").fillRect(0, 0, canvas.width, canvas.height);
-
-				for (let i = numStars; i < starsToDraw; i++) {
-					new Star(canvas);
-					numStars++;
-				}
-
-				for (const star in stars) {
-					stars[star].draw();
-				}
+	const observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+	if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
+		mutation.addedNodes.forEach(function(node) {
+			if (
+				node.nodeType === 1 &&
+				node.classList.contains("Common-container")
+			) {
+				applyAnimationToBackground(node);
 			}
-
-			const animationInterval = setInterval(draw, 10);
-
-			loadBg.dataset.animationInterval = animationInterval;
-			loadBg.dataset.canvasId = canvas.id;
-		}
-
-		function removeAnimationFromBackground(loadBg) {
-			if (!loadBg) return;
-
-			const animationInterval = loadBg.dataset.animationInterval;
-			const canvasId = loadBg.dataset.canvasId;
-
-			clearInterval(animationInterval);
-
-			if (canvasId) {
-				const canvasElement = document.getElementById(canvasId);
-				if (canvasElement) {
-					canvasElement.parentNode.remove();
-				}
-			}
-
-			delete loadBg.dataset.animationInterval;
-			delete loadBg.dataset.canvasId;
-		}
-
-		const observer = new MutationObserver(function(mutations) {
-			mutations.forEach(function(mutation) {
-				if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
-					mutation.addedNodes.forEach(function(node) {
-						if (
-							node.nodeType === 1 &&
-							node.classList.contains("Common-container")
-						) {
-							applyAnimationToBackground(node);
-						}
-					});
-				} else if (mutation.type === "childList" && mutation.removedNodes.length > 0) {
-					mutation.removedNodes.forEach(function(node) {
-						if (
-							node.nodeType === 1 &&
-							node.classList.contains("Common-container")
-						) {
-							removeAnimationFromBackground(node);
-						}
-					});
-				};
-			});
 		});
-
-		const observerConfig = {
-			childList: true,
-			subtree: true,
-		};
-		observer.observe(document.body, observerConfig);
-
-		document.querySelectorAll(".Common-container").forEach(function(element) {
-			applyAnimationToBackground(element);
+	} else if (mutation.type === "childList" && mutation.removedNodes.length > 0) {
+		mutation.removedNodes.forEach(function(node) {
+			if (
+				node.nodeType === 1 &&
+				node.classList.contains("Common-container")
+			) {
+				removeAnimationFromBackground(node);
+					}
+				});
+			};
 		});
-		const observer1 = new MutationObserver(function(mutations) {
-			mutations.forEach(function(mutation) {
-				if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
-					mutation.addedNodes.forEach(function(node) {
-						if (
-							node.nodeType === 1 &&
-							node.classList.contains("ApplicationLoaderComponentStyle-container")
-						) {
-							applyAnimationToBackground(node);
-						}
-					});
-				} else if (mutation.type === "childList" && mutation.removedNodes.length > 0) {
-					mutation.removedNodes.forEach(function(node) {
-						if (
-							node.nodeType === 1 &&
-							node.classList.contains("ApplicationLoaderComponentStyle-container")
-						) {
-							removeAnimationFromBackground(node);
-						}
-					});
-				};
-			});
-		});
+	});
 
-		const observerConfig1 = {
-			childList: true,
-			subtree: true,
-		};
-		observer1.observe(document.body, observerConfig1);
+	const observerConfig = {
+		childList: true,
+		subtree: true,
+	};
+	observer.observe(document.body, observerConfig);
 
-		document.querySelectorAll(".ApplicationLoaderComponentStyle-container").forEach(function(element) {
-			applyAnimationToBackground(element);
+	document.querySelectorAll(".Common-container").forEach(function(element) {
+		applyAnimationToBackground(element);
+	});
+	const observer1 = new MutationObserver(function(mutations) {
+		mutations.forEach(function(mutation) {
+			if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
+				mutation.addedNodes.forEach(function(node) {
+					if (
+						node.nodeType === 1 &&
+						node.classList.contains("ApplicationLoaderComponentStyle-container")
+					) {
+						applyAnimationToBackground(node);
+					}
+				});
+			} else if (mutation.type === "childList" && mutation.removedNodes.length > 0) {
+				mutation.removedNodes.forEach(function(node) {
+					if (
+						node.nodeType === 1 &&
+						node.classList.contains("ApplicationLoaderComponentStyle-container")
+					) {
+						removeAnimationFromBackground(node);
+					}
+				});
+			};
 		});
-	})();
+	});
+
+	const observerConfig1 = {
+		childList: true,
+		subtree: true,
+	};
+	observer1.observe(document.body, observerConfig1);
+
+	document.querySelectorAll(".ApplicationLoaderComponentStyle-container").forEach(function(element) {
+		applyAnimationToBackground(element);
+	});
+})();
