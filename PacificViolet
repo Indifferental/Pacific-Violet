@@ -1,14 +1,3 @@
-// ==UserScript==
-// @name         Pacific Violet Work v1.22 idvDev
-// @namespace    http://tampermonkey.net/
-// @version      v1.22
-// @description  none
-// @author       https://vk.com/legionlegionlegionlegionlegion
-// @match        https://*.tankionline.com/*
-// @icon         https://cdn.discordapp.com/attachments/1200939525120217240/1200941054698979338/pacificviolettheme.png
-// @grant        none
-// ==/UserScript==
-
 const css = `
 html, body {
       background: black
